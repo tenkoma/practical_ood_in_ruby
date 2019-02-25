@@ -1,12 +1,12 @@
 require_relative './wheel'
 
 # class Gear
-class Gear
+class GearKeywordArgs
   attr_reader :chainring, :cog, :wheel
-  def initialize(args)
-    @chainring = args[:chainring]
-    @cog       = args[:cog]
-    @wheel     = args[:wheel]
+  def initialize(chainring:, cog:, wheel: nil)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = wheel
   end
 
   def ratio
